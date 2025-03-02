@@ -13,6 +13,7 @@ import Reservaciones from "./pages/Reservaciones";
 import Contacto from "./pages/Contactos";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inicio from "./pages/Inicio";
+import logo from "./assets/logo_chino.jpeg"; // Importa el logo
 
 function App() {
   return (
@@ -21,7 +22,16 @@ function App() {
         {/* Navbar */}
         <Navbar bg="dark" variant="dark" expand="lg">
           <Container>
-            <Navbar.Brand href="/">Restaurante Delicioso</Navbar.Brand>
+            <Navbar.Brand href="/">
+              <img
+                src={logo} // Ruta del logo
+                alt="Logo del restaurante"
+                width="40" // Ancho del logo
+                height="40" // Alto del logo
+                className="d-inline-block align-top me-2" // Estilos para alinear el logo
+              />
+              Lóng Shí Xuān
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">

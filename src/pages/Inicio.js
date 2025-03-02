@@ -1,27 +1,69 @@
 import React from "react";
-import { Carousel, Card, Button, Container } from "react-bootstrap";
-import "/src/pages/Inicio.js"; // Importa el archivo de estilos
+import { Carousel, Card, Button, Container, Row, Col } from "react-bootstrap";
+import "../styles.css"; // Importa el archivo de estilos
+
+// Importa las imágenes
+import plato1 from "../assets/plato1.jpeg";
+import plato2 from "../assets/plato2.jpeg";
+import plato3 from "../assets/plato3.jpeg";
+import plato4 from "../assets/plato4.jpeg";
+import plato5 from "../assets/plato5.jpeg";
+import plato6 from "../assets/plato6.jpeg";
 
 const Inicio = () => {
-  // Array de platos
-  const platos = [
+  // Array de platos para el Slide 1
+  const platos1 = [
     {
       id: 1,
-      nombre: "Plato 1",
-      descripcion: "Descripción del plato 1.",
-      imagen: "https://via.placeholder.com/300x200",
+      nombre: "Pollo Kung Pao",
+      descripcion:
+        "Un plato clásico que combina pollo, cacahuates, vegetales y chiles, todo en una salsa picante y sabrosa.",
+      imagen: plato1, // Usa la variable importada
+      precio: "$10.00",
     },
     {
       id: 2,
-      nombre: "Plato 2",
-      descripcion: "Descripción del plato 2.",
-      imagen: "https://via.placeholder.com/300x200",
+      nombre: "Cerdo Agridulce",
+      descripcion:
+        "Trozos de cerdo fritos y crujientes, acompañados de una salsa agridulce hecha con piña, pimientos y cebolla.",
+      imagen: plato2, // Usa la variable importada
+      precio: "$12.00",
     },
     {
       id: 3,
-      nombre: "Plato 3",
-      descripcion: "Descripción del plato 3.",
-      imagen: "https://via.placeholder.com/300x200",
+      nombre: "Chow Mein",
+      descripcion:
+        "Fideos salteados con vegetales, carne (pollo, cerdo o res) y una salsa ligera de soya.",
+      imagen: plato3, // Usa la variable importada
+      precio: "$15.00",
+    },
+  ];
+
+  // Array de platos para el Slide 2
+  const platos2 = [
+    {
+      id: 4,
+      nombre: "Dim Sum",
+      descripcion:
+        "Pequeñas porciones de comida que incluyen dumplings, bollos al vapor, rollitos de primavera y otros bocados.",
+      imagen: plato4, // Usa la variable importada
+      precio: "$18.00",
+    },
+    {
+      id: 5,
+      nombre: "Pato Pekín",
+      descripcion:
+        "Pato asado con piel crujiente, servido con crepes, cebollín, pepino y salsa hoisin.",
+      imagen: plato5, // Usa la variable importada
+      precio: "$20.00",
+    },
+    {
+      id: 6,
+      nombre: "Mapo Tofu",
+      descripcion:
+        "Un plato picante de tofu suave cocinado con carne molida (generalmente cerdo), salsa de frijol fermentado y chiles.",
+      imagen: plato6, // Usa la variable importada
+      precio: "$22.00",
     },
   ];
 
@@ -33,51 +75,79 @@ const Inicio = () => {
         {" "}
         {/* Contenedor semitransparente */}
         {/* Carrusel de imágenes */}
-        <Carousel>
+        <Carousel fade>
+          {/* Slide 1: Platos 1, 2, 3 */}
           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://via.placeholder.com/800x400"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>Bienvenidos a Restaurante Delicioso</h3>
-              <p>Disfruta de los mejores platos de la ciudad.</p>
-            </Carousel.Caption>
+            <Container className="my-5">
+              <h2 id="menu" className="text-center mb-4 titulo-seccion">
+                Nuestro Menú
+              </h2>
+              <Row>
+                {platos1.map((plato) => (
+                  <Col key={plato.id} md={4} className="mb-4">
+                    <Card className="h-100 shadow-sm card-plato">
+                      <Card.Img
+                        variant="top"
+                        src={plato.imagen} // Usa la ruta de la imagen
+                        className="card-img-top"
+                      />
+                      <Card.Body className="d-flex flex-column">
+                        <Card.Title className="text-center">
+                          {plato.nombre}
+                        </Card.Title>
+                        <Card.Text className="text-center flex-grow-1">
+                          {plato.descripcion}
+                        </Card.Text>
+                        <Card.Text className="text-center text-success fw-bold">
+                          {plato.precio}
+                        </Card.Text>
+                        <Button variant="primary" className="mt-auto">
+                          Ordenar
+                        </Button>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </Container>
           </Carousel.Item>
+
+          {/* Slide 2: Platos 4, 5, 6 */}
           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://via.placeholder.com/800x400"
-              alt="Second slide"
-            />
-            <Carousel.Caption>
-              <h3>Menú del día</h3>
-              <p>Descubre nuestras especialidades.</p>
-            </Carousel.Caption>
+            <Container className="my-5">
+              <h2 id="menu" className="text-center mb-4 titulo-seccion">
+                Nuestro Menú
+              </h2>
+              <Row>
+                {platos2.map((plato) => (
+                  <Col key={plato.id} md={4} className="mb-4">
+                    <Card className="h-100 shadow-sm card-plato">
+                      <Card.Img
+                        variant="top"
+                        src={plato.imagen} // Usa la ruta de la imagen
+                        className="card-img-top"
+                      />
+                      <Card.Body className="d-flex flex-column">
+                        <Card.Title className="text-center">
+                          {plato.nombre}
+                        </Card.Title>
+                        <Card.Text className="text-center flex-grow-1">
+                          {plato.descripcion}
+                        </Card.Text>
+                        <Card.Text className="text-center text-success fw-bold">
+                          {plato.precio}
+                        </Card.Text>
+                        <Button variant="primary" className="mt-auto">
+                          Ordenar
+                        </Button>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </Container>
           </Carousel.Item>
         </Carousel>
-        {/* Sección de Menú */}
-        <Container className="my-5">
-          <h2 id="menu" className="text-center mb-4">
-            Nuestro Menú
-          </h2>
-          <div className="row">
-            {/* Mapeo dinámico de los platos */}
-            {platos.map((plato) => (
-              <div className="col-md-4 mb-4" key={plato.id}>
-                <Card>
-                  <Card.Img variant="top" src={plato.imagen} />
-                  <Card.Body>
-                    <Card.Title>{plato.nombre}</Card.Title>
-                    <Card.Text>{plato.descripcion}</Card.Text>
-                    <Button variant="primary">Ordenar</Button>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </div>
-        </Container>
       </div>
     </div>
   );

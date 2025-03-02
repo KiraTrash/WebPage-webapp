@@ -5,21 +5,141 @@
 /* Estilos para el fondo de la página de inicio */
 .fondo-inicio {
   background-image: url("./assets/main_food.jpg"); /* Ruta de la imagen */
-  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
-  padding: 20px; /* Espaciado interno para que el contenido no quede pegado a los bordes */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* Estilos para el contenido sobre el fondo */
+/* Contenedor semitransparente */
 .contenido-inicio {
   background-color: rgba(
     255,
     255,
     255,
-    0.8
-  ); /* Fondo blanco semitransparente */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados */
+    0.4
+  ); /* Fondo blanco con 40% de opacidad */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+  margin-bottom: 20px;
+}
+
+.carousel .carousel-item {
+  transition: opacity 1s ease-in-out; /* Animación de transición */
+}
+
+/* Estilos para los títulos de sección */
+.titulo-seccion {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Estilos para las tarjetas de platos */
+.card-plato {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 90%; /* Reduce el ancho de las cards */
+  margin: 0 auto; /* Centra las cards horizontalmente */
+}
+
+.card-plato:hover {
+  transform: translateY(-10px); /* Efecto de levitación */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilos para las imágenes de las cards */
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 180px; /* Reduce la altura de las imágenes */
+  object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarla */
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Estilos para el cuerpo de las cards */
+.card-body {
+  padding: 15px; /* Reduce el padding interno */
+}
+
+/* Estilos para el botón de ordenar */
+.btn-primary {
+  background-color: #ff6f61; /* Color naranja */
+  border: none;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Hace que el botón ocupe todo el ancho de la card */
+}
+
+.btn-primary:hover {
+  background-color: #e65a50; /* Color naranja oscuro al pasar el mouse */
+}
+
+/* Estilos para el contenedor de contacto */
+.contacto-container {
+  background-color: #f8f9fa; /* Fondo claro */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para el título de contacto */
+.titulo-contacto {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Estilos para la sección de información de contacto */
+.info-contacto {
+  background-color: #007bff; /* Fondo azul */
+  color: #fff; /* Texto blanco */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.info-contacto h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los íconos de contacto */
+.icono-contacto {
+  font-size: 1.2rem;
+  color: #fff; /* Color blanco */
+}
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+  background-color: #fff; /* Fondo blanco */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.formulario-contacto h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilos para los botones */
+.btn-primary {
+  background-color: #007bff; /* Color azul */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Color azul oscuro al pasar el mouse */
 }
