@@ -4,6 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
+  "homepage": "https://kiratrash.github.io/WebPage-webapp/",
   "dependencies": {
     "bootstrap": "5.3.3",
     "react": "^19.0.0",
@@ -16,10 +17,13 @@
   "devDependencies": {
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
+    "gh-pages": "^6.3.0",
     "loader-utils": "3.2.1",
     "typescript": "5.7.2"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

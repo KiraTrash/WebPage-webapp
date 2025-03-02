@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dff6fba8.css",
+    "main.js": "/static/js/main.02dd116c.js",
+    "static/media/plato1.jpeg": "/static/media/plato1.bde86b92c1f6c7eeacae.jpeg",
+    "static/media/plato2.jpeg": "/static/media/plato2.891829c2c94db3764834.jpeg",
+    "static/media/plato3.jpeg": "/static/media/plato3.9a31776a63d989c5b225.jpeg",
+    "static/media/plato4.jpeg": "/static/media/plato4.67a326c40056a1e88625.jpeg",
+    "static/media/plato6.jpeg": "/static/media/plato6.52ded634289207a06f2a.jpeg",
+    "static/media/plato5.jpeg": "/static/media/plato5.1be7a552e76dda9414f2.jpeg",
+    "static/media/main_food.jpg": "/static/media/main_food.9ee8a6d6e241adc369b9.jpg",
+    "static/media/logo_chino.jpeg": "/static/media/logo_chino.2b3cb913484c9edc7ade.jpeg",
+    "index.html": "/index.html",
+    "main.dff6fba8.css.map": "/static/css/main.dff6fba8.css.map",
+    "main.02dd116c.js.map": "/static/js/main.02dd116c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dff6fba8.css",
+    "static/js/main.02dd116c.js"
+  ]
+}
