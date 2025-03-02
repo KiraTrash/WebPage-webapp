@@ -143,3 +143,20 @@
 .btn-primary:hover {
   background-color: #0056b3; /* Color azul oscuro al pasar el mouse */
 }
+
+/* reservaciones */
+.reservaciones-card {
+  border-radius: 15px;
+  border: none;
+}
+
+.reservaciones-button {
+  background-color: #ff6f61;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.reservaciones-button:hover {
+  background-color: #ff4a3d;
+}
+
